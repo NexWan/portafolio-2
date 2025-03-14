@@ -4,6 +4,7 @@ import Welcome from "./Welcome";
 //@ts-ignore
 import { AnimatedBackground } from 'animated-backgrounds';
 import About from "./About";
+import Projects from "./Projects";
 
 export default function Main() {
   return (
@@ -14,6 +15,9 @@ export default function Main() {
     </Element>
     <Element name="about" className="w-screen h-screen overflow-y-scroll">
       <About />
+    </Element>
+    <Element name="projects" className="w-screen h-screen overflow-y-scroll">
+      <Projects />
     </Element>
     </>
   );

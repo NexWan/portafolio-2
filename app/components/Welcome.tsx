@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { ReactTyped } from 'react-typed';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { ReactTyped } from 'react-typed';
 
 const Welcome = () => {
   const [typingStopped, setTypingStopped] = useState(false);
