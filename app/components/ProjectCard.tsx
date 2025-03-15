@@ -1,5 +1,3 @@
-
-
 type ProjectCardProps = {
   title: string;
   description: string;
@@ -10,12 +8,12 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ title, description, image, link, languages }: ProjectCardProps) => {
   return (
-    <div className="card bg-base-100 w-96 shadow-sm hover:cursor-pointer hover:scale-105" onClick={() => {open(link)}}>
+    <div className="card bg-base-100 w-96 h-max shadow-sm hover:cursor-pointer hover:scale-105 transition-all" onClick={() => {open(link)}}>
       <figure>
         <img
           src={image}
           alt="project" 
-          className="mt-2"
+          className="m-2 object-fit h-32 self-center"
           />
       </figure>
       <div className="card-body">
