@@ -75,3 +75,7 @@ body, html {
 .third-bg {
     background: var(--color-base-200)
 }
+
+i {
+    font-size: 60px;
+}

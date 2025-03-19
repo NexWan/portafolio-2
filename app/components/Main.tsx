@@ -5,6 +5,7 @@ import Welcome from "./Welcome";
 import { AnimatedBackground } from 'animated-backgrounds';
 import About from "./About";
 import Projects from "./Projects";
+import Skills from "./Skills";
 
 export default function Main() {
   return (
@@ -18,6 +19,9 @@ export default function Main() {
     </Element>
     <Element name="projects" className="w-screen h-screen overflow-y-scroll">
       <Projects />
+    </Element>
+    <Element name="skills" className="w-screen h-screen overflow-y-scroll">
+      <Skills />
     </Element>
     </>
   );

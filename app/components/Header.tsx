@@ -28,6 +28,11 @@ const Header = () => {
                     <li className="hover:scale-105 ">
                         <Link to="projects" smooth={true} duration={500} activeClass="!text-red text-xl" spy={true} onSetInactive={() => { setIsActive(false)}} onSetActive={() => setCurrent("Projects")} className={`hover:cursor-pointer hover:scale-105 transition-all`}>Projects</Link>
                     </li>
+                    <li className="hover:scale-105">
+                      <Link to="skills" smooth={true} className={`hover:cursor-pointer transition-all`} duration={500} spy={true} activeClass="text-xl" onSetActive={() => {setCurrent("Skills"); console.log('Skills')}}>
+                        Skills
+                      </Link>
+                    </li>
                     <li className="hover:scale-105 ">
                         <a href="#contact" className="header__nav-link">Contact</a>
                     </li>

@@ -1,5 +1,6 @@
 import  ProjectCard  from "./ProjectCard";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const [language, setLanguage] = useState("");
@@ -77,6 +78,13 @@ const Projects = () => {
       image: "/media/iot.png",
       link: "https://github.com/RamMaths/iot-container",
       languages: ["Rust", "Oracle", "OracleDB", "APEX (Oracle Application Express)"]
+    }, 
+    {
+      title: "Zig Server Handler",
+      description: "On development, this is a Zig server to serve web pages with static routes",
+      image: "/media/ziguana.png",
+      link: "https://github.com/NexWan/Zig-server-handler",
+      languages: ["Zig"]
     }
   ];
   
@@ -106,11 +114,12 @@ const Projects = () => {
           </div>
         </div>
         <div className="flex flex-row items-center justify-center w-3/4 overflow-scroll">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 items-center h-full">
+          <motion.div key={language} initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 items-center h-full">
             {
-              projects.filter(project => language === "" || project.languages.includes(language)).map((project) => {
+              projects.filter(project => language === "" || project.languages.includes(language)).map((project, key) => {
                 return (
                   <ProjectCard
+                    key={key}
                     title={project.title}
                     description={project.description}
                     image={project.image}
@@ -120,7 +129,7 @@ const Projects = () => {
                 )
               })
             }
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

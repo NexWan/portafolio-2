@@ -12,6 +12,7 @@
     "@react-router/node": "^7.3.0",
     "@react-router/serve": "^7.3.0",
     "animated-backgrounds": "^1.1.0",
+    "devicon": "^2.16.0",
     "framer-motion": "^12.4.11",
     "isbot": "^5.1.17",
     "react": "^19.0.0",
