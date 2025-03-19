@@ -20,7 +20,7 @@ const About = () => {
   ]
   const [currentSection, setCurrentSection] = React.useState("bio");
   return (
-    <div className="w-full h-full main-bg flex items-center justify-center">
+    <motion.div initial={{x: -200}} animate={{x: 0}} transition={{duration: 0.5}} className="w-full h-full main-bg flex items-center justify-center">
       <div className="w-1/6 min-h-screen overflow-y-auto flex items-center second-bg">
         <nav className="">
           <ul className=" list-disc ml-6 *:w-full *:text-xl space-y-2 *:hover:cursor-pointer *:hover:scale-110 *:transition-all">
@@ -221,7 +221,7 @@ const About = () => {
         </motion.div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
