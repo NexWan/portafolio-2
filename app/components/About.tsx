@@ -21,14 +21,14 @@ const About = () => {
   const [currentSection, setCurrentSection] = React.useState("bio");
   return (
     <motion.div initial={{x: -200}} animate={{x: 0}} transition={{duration: 0.5}} className="w-full h-full main-bg flex items-center justify-center">
-      <div className="w-1/6 min-h-screen overflow-y-auto flex items-center second-bg">
+      <div className="lg:w-1/6 w-2/6 min-h-screen overflow-y-auto flex items-center second-bg">
         <nav className="">
-          <ul className=" list-disc ml-6 *:w-full *:text-xl space-y-2 *:hover:cursor-pointer *:hover:scale-110 *:transition-all">
+          <ul className="menu second-bg rounded-box w-32 md:w-56 *:text-lg">
             <li onClick={() => setCurrentSection("bio")}>
               <a
                 href="#bio"
                 className={`text-white ${
-                  currentSection === "bio" ? "underline underline-offset-4" : ""
+                  currentSection === "bio" ? "menu-active" : ""
                 }`}
               >
                 Bio
@@ -39,7 +39,7 @@ const About = () => {
                 href="#experience"
                 className={`text-white ${
                   currentSection === "experience"
-                    ? "underline underline-offset-4"
+                    ? "menu-active"
                     : ""
                 }`}
               >
@@ -50,7 +50,7 @@ const About = () => {
               <a href="#awards"
                 className={`text-white ${
                   currentSection === "awards"
-                    ? "underline underline-offset-4"
+                    ? "menu-active"
                     : ""
                 }`}
               >Awards</a>
@@ -66,10 +66,10 @@ const About = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <h1 className="text-3xl font-bold mb-4 text-start self-start">
+            <h1 className="lg:text-3xl text-xl font-bold mb-4 text-start self-start">
               About Me
             </h1>
-            <p className="text-justify">
+            <p className="text-justify text-sm md:text-lg">
               My name is Leonardo, I'm a computer systems engineering student at
               the Instituto Tecnologico de Saltillo.<br></br>
               I'm passionate about technology and I love to learn new things.
@@ -97,10 +97,10 @@ const About = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <h1 className="text-3xl font-bold mb-4 text-start self-start">
+            <h1 className="lg:text-3xl text-xl font-bold mb-4 text-start self-start">
               Experience
             </h1>
-            <p className="text-justify">
+            <p className="text-justify text-sm md:text-lg">
               I've worked for several companies as a software developer, where
               I've had the opportunity to work on a variety of projects using
               different technologies and frameworks. I've also worked on
@@ -118,7 +118,7 @@ const About = () => {
                 </figure>
                 <div className="card-body">
                   <h2 className="card-title">ZF Group Saltillo</h2>
-                  <p>Automation Engineering Intern</p>
+                  <p >Automation Engineering Intern</p>
                   <p>Duration: 4 months (AGO 2024 - DEC 2024)</p>
                   <p>
                     During my internship, I worked on a variety of projects,
@@ -178,20 +178,20 @@ const About = () => {
           transition={{ duration: 1 }}
         >
           <div className="w-full items-center flex justify-center flex-col h-full">
-            <h1 className="text-3xl self-start">Awards</h1>
-            <p className="">During my time as a student, I've participated in several hackathons and coding competitions, winning multiple awards.
+            <h1 className=" text-xl lg:text-3xl self-start">Awards</h1>
+            <p className="text-sm lg:text-lg">During my time as a student, I've participated in several hackathons and coding competitions, winning multiple awards.
               I've also been part of the computer systems chapter at my university, where I've organized events and workshops to promote computer science education.
             </p>
             <div className="flex flex-col items-center w-full">
-              <h2 className="text-2xl self-start">Hackathons</h2>
+              <h2 className=" text-xl lg:text-2xl self-start">Hackathons</h2>
               <ul className="flex flex-col *:ml-5 justify-center w-full h-full list-disc">
-                <li>Winner of regional hackaton organized by the TECNM</li>
-                <li>Winner of Daimler's truck hackaton organized by Daimler</li>
+                <li className="text-sm lg:text-lg">Winner of regional hackaton organized by the TECNM</li>
+                <li className="text-sm lg:text-lg">Winner of Daimler's truck hackaton organized by Daimler</li>
               </ul>
             </div>
             <div className="flex flex-col items-center w-full">
-              <h2 className="text-2xl self-start">Coding Competitions</h2>
-              <ul className="flex flex-col *:ml-5 justify-center w-full h-full list-disc ">
+              <h2 className="text-xl lg:text-2xl self-start">Coding Competitions</h2>
+              <ul className="flex flex-col *:ml-5 justify-center w-full h-full list-disc *:text-sm *:lg:text-lg">
                 <li>Participant at the Oracle Cloud Challenge organized by Oracle</li>
                 <li>Participant at the ICPC locals organized by ICPC</li>
               </ul>

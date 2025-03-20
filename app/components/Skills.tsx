@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 const Skills = () => {
   const stacks = [
+    "All",
     "Main Stack",
     "Backend",
     "Frontend",
@@ -197,16 +198,31 @@ const Skills = () => {
     }
   ]
   
+  const All = [
+    mainStack,
+    backendStack,
+    frontendStack,
+    databaseStack,
+    toolStack,
+    otherStack,
+    cloudStack,
+    deployStack
+  ]
+  
+  const allUniqueStacks = All.flat().filter((skill, index, self) =>
+    index === self.findIndex((t) => t.name === skill.name)
+  );
+  
   const [selectedStack, setSelectedStack] = useState(stacks[0]);
   
   return (
     <div className="main-bg w-full h-full flex-col flex items-center justify-start">
       <div className="main-bg w-full h-1/6 self-start justify-self-start mt-20 ml-6">
-        <h2 className="text-4xl">Skills</h2>
-        <p> Here you can will find some of my skills</p>
+        <h2 className="text-xl lg:text-3xl">Skills</h2>
+        <p className='text-sm lg:text-lg'> Here you can will find some of my skills</p>
       </div>
       <div className="main-bg w-full h-5/6 flex self-start justify-self-start">
-        <div className="h-full bg-base-200 rounded-t-lg w-1/6 flex items-start justify-center">
+        <div className="h-full bg-base-200 rounded-t-lg w-2/6 lg:w-1/6 flex items-start justify-center">
           <ul className="menu bg-base-200 rounded-box w-56 *:text-lg">
               <h2 className='!menu-title'>Stacks</h2>
               {stacks.map((stack, index) => (
@@ -214,59 +230,59 @@ const Skills = () => {
               ))}
           </ul>
         </div>
-        <div key={selectedStack} className='w-5/6 second-bg flex items-center justify-center flex-wrap gap-4'>
+        <div key={selectedStack} className='w-5/6 overflow-scroll lg:p-8 p-4 second-bg flex items-center justify-center flex-wrap gap-4'>
           {
             selectedStack == "Main Stack"
               ? (
                 mainStack.map((skill, index) => (
-                  <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} key={index} className="flex hover:scale-105 flex-col items-center justify-center">
+                  <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} key={index} className="flex hover:scale-105 flex-col items-center justify-center">
                     {skill.picture}
-                    <p className="text-center text-md">{skill.name}</p>
+                    <p className="text-sm lg:text-lg text-center text-md">{skill.name}</p>
                   </motion.div>
                 ))
               ) : 
               selectedStack == "Backend"
               ? (
                 backendStack.map((skill, index) => (
-                  <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} key={index} className="flex hover:scale-105 flex-col items-center justify-center">
+                  <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} key={index} className="flex hover:scale-105 flex-col items-center justify-center">
                     {skill.picture}
-                    <p className="text-center text-md">{skill.name}</p>
+                    <p className="text-sm lg:text-lg text-center text-md">{skill.name}</p>
                   </motion.div>
                 ))
               ) : 
               selectedStack == "Frontend"
               ? (
                 frontendStack.map((skill, index) => (
-                  <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} key={index} className="flex hover:scale-105 flex-col items-center justify-center">
+                  <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} key={index} className="flex hover:scale-105 flex-col items-center justify-center">
                     {skill.picture}
-                    <p className="text-center text-md">{skill.name}</p>
+                    <p className="text-sm lg:text-lg text-center text-md">{skill.name}</p>
                   </motion.div>
                 ))
               ) : 
               selectedStack == "Database"
               ? (
                 databaseStack.map((skill, index) => (
-                  <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} key={index} className="flex hover:scale-105 flex-col items-center justify-center">
+                  <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} key={index} className="flex hover:scale-105 flex-col items-center justify-center">
                     {skill.picture}
-                    <p className="text-center text-md">{skill.name}</p>
+                    <p className="text-sm lg:text-lg text-center text-md">{skill.name}</p>
                   </motion.div>
                 ))
               ) : 
               selectedStack == "Tools"
               ? (
                 toolStack.map((skill, index) => (
-                  <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} key={index} className="flex hover:scale-105 flex-col items-center justify-center">
+                  <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} key={index} className="flex hover:scale-105 flex-col items-center justify-center">
                     {skill.picture}
-                    <p className="text-center text-md">{skill.name}</p>
+                    <p className="text-sm lg:text-lg text-center text-md">{skill.name}</p>
                   </motion.div>
                 ))
               ) : 
               selectedStack == "Other"
               ? (
                 otherStack.map((skill, index) => (
-                  <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} key={index} className="flex hover:scale-105 flex-col items-center justify-center">
+                  <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} key={index} className="flex hover:scale-105 flex-col items-center justify-center">
                     {skill.picture}
-                    <p className="text-center text-md">{skill.name}</p>
+                    <p className="text-sm lg:text-lg text-center text-md">{skill.name}</p>
                   </motion.div>
                 ))
               )
@@ -274,21 +290,35 @@ const Skills = () => {
               selectedStack === "Cloud"
               ? (
                 cloudStack.map((skill, index) => (
-                  <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} key={index} className="flex hover:scale-105 flex-col items-center justify-center">
+                  <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} key={index} className="flex hover:scale-105 flex-col items-center justify-center">
                     {skill.picture}
-                    <p className="text-center text-md">{skill.name}</p>
+                    <p className="text-sm lg:text-lg text-center text-md">{skill.name}</p>
                   </motion.div>
                 ))
               ) :
               selectedStack === "Deployment"
               ? (
                 deployStack.map((skill, index) => (
-                  <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} key={index} className="flex hover:scale-105 flex-col items-center justify-center">
+                  <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} key={index} className="flex hover:scale-105 flex-col items-center justify-center">
                     {skill.picture}
-                    <p className="text-center text-md">{skill.name}</p>
+                    <p className="text-sm lg:text-lg text-center text-md">{skill.name}</p>
                   </motion.div>
                 ))
               ) :
+              selectedStack === "All" ? (
+                allUniqueStacks.map((skill, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="flex hover:scale-105 flex-col items-center justify-center overflow-scroll"
+                  >
+                    {skill.picture}
+                    <p className="text-sm lg:text-lg text-center text-md">{skill.name}</p>
+                  </motion.div>
+                ))
+              ):
               selectedStack
           }
         </div>

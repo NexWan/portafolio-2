@@ -77,5 +77,16 @@ body, html {
 }
 
 i {
-    font-size: 60px;
+    font-size: 40px;
+}
+
+.header__nav-list{
+    position: absolute;
+    z-index: 50;
+}
+
+@media(width > 64rem) {
+    i {
+        font-size: 60px;
+    }
 }

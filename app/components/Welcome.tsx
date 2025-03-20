@@ -12,18 +12,18 @@ const Welcome = () => {
         typeSpeed={40}
         backSpeed={50}
         onComplete={() => {setTypingStopped(true)}}
-        className='text-4xl chewy-regular mb-5'
+        className='text-xl lg:text-4xl chewy-regular mb-5 text-center'
       />
       {typingStopped && 
         <motion.div className='flex flex-col items-center justify-center' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-          <img src="/media/yo.jpg" className='rounded-full mb-2 shadow-2xl' alt="Leo" width={200} height={200} />
-          <p className='text-2xl text-center'>My name is Leo. <br></br>But you can call me Wan!</p>
+          <img src="/media/yo.jpg" className='rounded-full mb-2 shadow-2xl w-32 lg:w-64' alt="Leo" width={200} height={200} />
+          <p className='lg:text-2xl text-lg text-center'>My name is Leo. <br></br>But you can call me Wan!</p>
           <ReactTyped
             strings={['Frontend Developer', 'Backend Developer', 'Fullstack Developer', 'Power Platform Developer', 'Networking Enthusiast']}
             typeSpeed={40}
             backSpeed={50}
             loop
-            className='text-2xl chewy-regular mb-5'
+            className='lg:text-2xl text-lg chewy-regular mb-5'
           />
         </motion.div>
       }

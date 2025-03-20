@@ -77,7 +77,7 @@ const Projects = () => {
       description: "An IoT implementation utilizing ESP32 to control a container sending data to a server on Oracle Cloud (Made for the Oracle Cloud Challenge)",
       image: "/media/iot.png",
       link: "https://github.com/RamMaths/iot-container",
-      languages: ["Rust", "Oracle", "OracleDB", "APEX (Oracle Application Express)"]
+      languages: ["Rust", "Oracle", "OracleDB", "APEX"]
     }, 
     {
       title: "Zig Server Handler",
@@ -94,15 +94,15 @@ const Projects = () => {
     <div className="w-full h-full main-bg flex flex-col  justify-center">
       <div className="flex flex-col second-bg w-full h-1/4 justify-center">
         <div className="flex flex-col justify-center max-w-2xl pl-5">
-          <h3 className="text-4xl mb-5">Projects</h3>
-          <p>Here you can find some of my projects. You can sort them by programming language!<br></br>
+          <h3 className="text-xl lg:text-3xl mb-2">Projects</h3>
+          <p className="text-sm lg:text-lg">Here you can find some of my projects. You can sort them by programming language!<br></br>
           You can click on the project card and it will take you to the project page.
           </p>
         </div>
       </div>
       <div className="flex flex-row w-full justify-center h-3/4">
-        <div className="flex flex-col justify-start w-1/4 third-bg h-full self-start pl-5">
-          <h3 className="text-2xl pt-20 pb-5">Programming Languages</h3>
+        <div className="flex flex-col justify-start w-2/5 lg:w-1/4 third-bg h-full self-start pl-5">
+          <h3 className="text-xl lg:text-2xl pt-20 pb-5">Programming Languages</h3>
           <div className="flex flex-row flex-wrap gap-3 *:hover:cursor-pointer *:hover:scale-105 *:!text-white *:!badge *:!badge-secondary">
             {
               programmingLanguages.map((language) => {

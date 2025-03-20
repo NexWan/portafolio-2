@@ -8,7 +8,7 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ title, description, image, link, languages }: ProjectCardProps) => {
   return (
-    <div className="card bg-base-100 w-96 h-max shadow-sm hover:cursor-pointer hover:scale-105 transition-all" onClick={() => {open(link)}}>
+    <div className="card bg-base-100 w-64 lg:w-96 h-max shadow-sm hover:cursor-pointer hover:scale-105 transition-all" onClick={() => {open(link)}}>
       <figure>
         <img
           src={image}
@@ -23,7 +23,7 @@ const ProjectCard = ({ title, description, image, link, languages }: ProjectCard
         <p>{description}</p>
         <div className="flex flex-row flex-wrap gap-2">
           {languages.map((language, index) => (
-            <div key={index} className="!badge !badge-primary !text-white">{language}</div>
+            <div key={index} className="!badge !badge-primary !text-white text-sm">{language}</div>
           ))}
         </div>
       </div>
