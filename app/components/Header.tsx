@@ -37,16 +37,16 @@ const Header = () => {
       <nav className="flex items-end justify-end mr-5 w-1/3">
         {/* Hamburger Menu Button */}
         <button
-          className="lg:hidden flex flex-col items-center justify-center"
+          className="lg:hidden flex flex-col items-center justify-center hover:cursor-pointer h-12"
           onClick={toggleMenu}
         >
-          <span className="block w-6 h-0.5 bg-black mb-1"></span>
-          <span className="block w-6 h-0.5 bg-black mb-1"></span>
-          <span className="block w-6 h-0.5 bg-black"></span>
+          <span className="block w-6 h-0.5 bg-white mb-1"></span>
+          <span className="block w-6 h-0.5 bg-white mb-1"></span>
+          <span className="block w-6 h-0.5 bg-white"></span>
         </button>
         {/* Navigation Links */}
         <ul
-          className={`header__nav-list flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-10 absolute lg:static top-12 right-0 px-6 main-bg z-[9999] items-center justify-center h-screen lg:bg-transparent w-screen lg:w-auto transition-transform transform ${
+          className={`header__nav-list flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-10 absolute lg:static top-12 right-0 px-6 main-bg z-[9999] items-center justify-center md:h-12 h-screen !md:bg-transparent w-screen lg:w-auto transition-transform transform ${
             isMenuOpen ? 'translate-x-0' : 'translate-x-full lg:translate-x-0'
           }`}
         >

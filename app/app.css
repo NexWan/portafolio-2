@@ -81,12 +81,17 @@ i {
 }
 
 .header__nav-list{
-    position: absolute;
     z-index: 50;
 }
 
 @media(width > 64rem) {
     i {
         font-size: 60px;
+    }
+}
+
+@media (width >= 48rem) {
+    .header__nav-list {
+        background: transparent;
     }
 }
