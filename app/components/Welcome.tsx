@@ -6,7 +6,7 @@ const Welcome = () => {
   const [typingStopped, setTypingStopped] = useState(false);
   return (
     <motion.div initial={{x: -100}} animate={{x: 0}} className='w-full h-full flex items-center justify-center strong-bg'>
-      <div className='container items-center justify-center flex flex-col text-white card-bg w-1/2 h-3/5 rounded-xl shadow-xl'>
+      <div className='container items-center justify-center flex flex-col text-white card-bg w-3/4 md:w-1/2 h-3/5 rounded-xl shadow-xl'>
       <ReactTyped
         strings={['Welcome to My Portfolio']}
         typeSpeed={40}

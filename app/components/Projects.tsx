@@ -91,9 +91,9 @@ const Projects = () => {
   const programmingLanguages = ["TypeScript", "Python", "Java", "C#", "Zig", "Rust"];
 
   return (
-    <div className="w-full h-full main-bg flex flex-col  justify-center">
-      <div className="flex flex-col second-bg w-full h-1/4 justify-center">
-        <div className="flex flex-col justify-center max-w-2xl pl-5">
+    <div className="w-full h-full main-bg flex flex-col  justify-end">
+      <div className="flex flex-col second-bg w-full h-1/4 justify-end pb-2">
+        <div className="flex flex-col justify-end max-w-2xl pl-5">
           <h3 className="text-xl lg:text-3xl mb-2">Projects</h3>
           <p className="text-sm lg:text-lg">Here you can find some of my projects. You can sort them by programming language!<br></br>
           You can click on the project card and it will take you to the project page.
@@ -101,9 +101,9 @@ const Projects = () => {
         </div>
       </div>
       <div className="flex flex-row w-full justify-center h-3/4">
-        <div className="flex flex-col justify-start w-2/5 lg:w-1/4 third-bg h-full self-start pl-5">
-          <h3 className="text-xl lg:text-2xl pt-20 pb-5">Programming Languages</h3>
-          <div className="flex flex-row flex-wrap gap-3 *:hover:cursor-pointer *:hover:scale-105 *:!text-white *:!badge *:!badge-secondary">
+        <div className="flex flex-col justify-start w-2/5 lg:w-1/4 third-bg h-full self-start items-center">
+          <h3 className="text-xl lg:text-2xl pt-20 pb-5 text-center">Programming Languages</h3>
+          <div className="flex flex-row md:pl-3 items-center md:justify-start justify-center flex-wrap gap-3 *:hover:cursor-pointer *:hover:scale-105 *:!text-white *:!badge *:!badge-secondary">
             {
               programmingLanguages.map((language) => {
                 return (

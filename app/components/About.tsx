@@ -23,7 +23,7 @@ const About = () => {
     <motion.div initial={{x: -200}} animate={{x: 0}} transition={{duration: 0.5}} className="w-full h-full main-bg flex items-center justify-center">
       <div className="lg:w-1/6 w-2/6 min-h-screen overflow-y-auto flex items-center second-bg">
         <nav className="">
-          <ul className="menu second-bg rounded-box w-32 md:w-56 *:text-lg">
+          <ul className="menu second-bg rounded-box w-24 md:w-56 p-0 md:p-8  *:md:text-lg">
             <li onClick={() => setCurrentSection("bio")}>
               <a
                 href="#bio"
@@ -58,7 +58,7 @@ const About = () => {
           </ul>
         </nav>
       </div>
-      <div className="w-3/4 h-screen overflow-y-scroll mx-auto px-4 py-8 flex flex-col items-center justify-center">
+      <div className="w-3/4 h-screen overflow-y-scroll mx-auto px-4 py-8 flex flex-col items-center justify-center md:justify-center">
         {currentSection === "bio" && (
           <motion.div
             className="flex flex-col justify-center items-center"
@@ -92,7 +92,7 @@ const About = () => {
         )}
         {currentSection === "experience" && (
           <motion.div
-            className="flex flex-col items-center justify-start w-full h-screen overflow-y-auto"
+            className="flex flex-col items-center justify-center w-full h-5/6 md:h-screen overflow-y-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
@@ -107,13 +107,13 @@ const About = () => {
               personal projects, where I've learned and applied new skills and
               technologies.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 w-full overflow-y-auto">
-              <div className="card second-bg shadow-sm rounded-xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4 w-full h-4/6 overflow-y-auto">
+              <div className="card second-bg shadow-sm rounded-xl md:w-md">
                 <figure>
                   <img
                     src="/media/zflogo.svg"
                     alt="ZF"
-                    className="w-32 h-32 md:w-64 md:h-64 object-contain"
+                    className="w-32 h-32 md:w-40 md:h-40 object-contain"
                   />
                 </figure>
                 <div className="card-body">
@@ -140,12 +140,12 @@ const About = () => {
                   </ul>
                 </div>
               </div>
-              <div className="card second-bg shadow-sm rounded-xl">
+              <div className="card second-bg shadow-sm rounded-xl md:w-md">
                 <figure>
                   <img
                     src="/media/softtek.webp"
                     alt="Softtek"
-                    className="object-contain"
+                    className="object-cover w-32 h-32 md:w-full md:h-40"
                   />
                 </figure>
                 <div className="card-body">
@@ -172,12 +172,12 @@ const About = () => {
         )}
         {currentSection === "awards" && (
         <motion.div
-          className="flex flex-col items-center justify-start w-full h-screen overflow-y-auto"
+          className="flex flex-col items-center justify-start w-full h-5/6 md:h-screen overflow-y-scroll"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className="w-full items-center flex justify-center flex-col h-full">
+          <div className="w-full items-center flex justify-center md:justify-center flex-col h-full overflow-scroll">
             <h1 className=" text-xl lg:text-3xl self-start">Awards</h1>
             <p className="text-sm lg:text-lg">During my time as a student, I've participated in several hackathons and coding competitions, winning multiple awards.
               I've also been part of the computer systems chapter at my university, where I've organized events and workshops to promote computer science education.
@@ -189,7 +189,7 @@ const About = () => {
                 <li className="text-sm lg:text-lg">Winner of Daimler's truck hackaton organized by Daimler</li>
               </ul>
             </div>
-            <div className="flex flex-col items-center w-full">
+            <div className="flex flex-col items-center w-full ">
               <h2 className="text-xl lg:text-2xl self-start">Coding Competitions</h2>
               <ul className="flex flex-col *:ml-5 justify-center w-full h-full list-disc *:text-sm *:lg:text-lg">
                 <li>Participant at the Oracle Cloud Challenge organized by Oracle</li>
@@ -203,8 +203,9 @@ const About = () => {
                   renderItem: (item) => (
                     <img 
                       src={item.original} 
-                      style={{ height: '300px', objectFit: 'cover' }}
+                      style={{ objectFit: 'cover' }}
                       alt={item.originalAlt}
+                      className="rounded-lg shadow-md w-32 h-32 md:w-48 md:h-48"
                     />
                   )
                 }))}
@@ -214,7 +215,7 @@ const About = () => {
                 lazyLoad={true}
                 showFullscreenButton={false}
                 autoPlay={true}
-                additionalClass="mt-4"
+                additionalClass="mt-4 hidden md:block"
               />
             </div>
           </div>

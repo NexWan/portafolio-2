@@ -217,13 +217,13 @@ const Skills = () => {
   
   return (
     <div className="main-bg w-full h-full flex-col flex items-center justify-start">
-      <div className="main-bg w-full h-1/6 self-start justify-self-start mt-20 ml-6">
+      <div className="main-bg w-full h-1/6 justify-end flex flex-col self-center justify-self-center ml-6">
         <h2 className="text-xl lg:text-3xl">Skills</h2>
-        <p className='text-sm lg:text-lg'> Here you can will find some of my skills</p>
+        <p className='text-sm lg:text-lg mb-3'> Here you can will find some of my skills</p>
       </div>
       <div className="main-bg w-full h-5/6 flex self-start justify-self-start">
         <div className="h-full bg-base-200 rounded-t-lg w-2/6 lg:w-1/6 flex items-start justify-center">
-          <ul className="menu bg-base-200 rounded-box w-56 *:text-lg">
+          <ul className="menu bg-base-200 rounded-box md:w-56 *:text-sm *:md:text-lg">
               <h2 className='!menu-title'>Stacks</h2>
               {stacks.map((stack, index) => (
                 <li key={index} onClick={() => setSelectedStack(stack)}><a className={`${selectedStack === stack ? 'menu-active' : ''}`}>{stack}</a></li>
