@@ -85,6 +85,20 @@ const Projects = () => {
       image: "/media/ziguana.png",
       link: "https://github.com/NexWan/Zig-server-handler",
       languages: ["Zig"]
+    }, 
+    {
+      title: "Postgresql Zig Wrapper",
+      description: "On development, this is a Zig wrapper for PostgreSQL",
+      image: "/media/ziguana.png",
+      link: "https://github.com/NexWan/Zig-server-handler",
+      languages: ["Zig"]
+    }, 
+    {
+      title: "Postgresql Zig Wrapper and Inner Join Queries",
+      description: "On development, this is a Zig wrapper for PostgreSQL utilizing libpq and the interoperability between C and Zig",
+      image: "/media/ziguana.png",
+      link: "https://github.com/NexWan/zig-postgresql-wrapper",
+      languages: ["Zig"]
     }
   ];
   
